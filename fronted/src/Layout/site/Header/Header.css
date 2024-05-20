@@ -1,0 +1,20 @@
+.header{
+    background-color: rgb(255, 231, 201);
+    padding: 20px;
+ 
+} .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .center-header ul{
+        display: flex;
+        gap: 20px;
+    }
+    .right-header{
+        display: flex;
+        gap: 15px;
+    }
+    .left-header img{
+background-color: black;
+    }
+}
