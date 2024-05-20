@@ -18,3 +18,22 @@
 background-color: black;
     }
 }
+@media only screen and (max-width: 960px) {
+    .center-header ul {
+   flex-wrap: wrap;
+    }
+    .right-header{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+ 
+    .right-header i{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+  .left-header img{
+    display: none;
+  }
+  }

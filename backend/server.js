@@ -24,7 +24,10 @@ const productSchema=mongoose.Schema({
  description:{
      type:String,
      require:true
- }
+ },category:{
+    type:String,
+    require:true
+}
 })
 const Products=mongoose.model("Products",productSchema)
 

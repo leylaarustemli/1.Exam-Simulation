@@ -21,7 +21,7 @@ function addToBasket(id){
   let basketItem=basket.find(item=>item._id==id)
   if(basketItem){
     basketItem.count++
-    basketItem.totalPrice+=basketItem.totalPrice
+    basketItem.totalPrice+=basketItem.price
     setBasket([...basket])
   }
   else{
@@ -32,8 +32,21 @@ function addToBasket(id){
     setBasket([...basket,newItem])
   }
 }
+
+function deleteBasket(id){
+  let target=basket.find((x)=>x._id==id)
+  if(target.count>1){
+    target.count--;
+    target.totalPrice=target.price*target.count;
+    setBasket([...basket])
+  }else{
+    let indexOfTarget=basket.indexOf(target)
+    basket.splice(indexOfTarget,1)
+    setBasket([...basket])
+  }
+}
 const contextData={
-  data,setBasket,setData,basket
+  data,setBasket,setData,basket,addToBasket,deleteBasket
 }
 
 
