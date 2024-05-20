@@ -68,20 +68,20 @@ const Add = () => {
              name="description"
              onChange={handleChange}
              onBlur={handleBlur}
-             value={values.category}
-             placeholder='Description'
-           />
-           {errors.category && touched.category && errors.category}
-           <input
-             type="text"
-             name="description"
-             onChange={handleChange}
-             onBlur={handleBlur}
-             value={values.category}
+             value={values.description}
              placeholder='Description'
            />
            {errors.description && touched.description && errors.description}
-           <button type="submit" disabled={isSubmitting}>
+           <input
+             type="text"
+             name="category"
+             onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.category}
+             placeholder='category'
+           />
+           {errors.category && touched.category && errors.category}
+           <button type="submit" >
              Submit
            </button>
          </form>
